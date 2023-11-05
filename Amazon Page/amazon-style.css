@@ -382,6 +382,8 @@ footer {
 
 .footer img {
   width: 50%;
+  border: 5px solid lightgrey;
+  border-radius: 5%;
   align-self: center;
 }
 
