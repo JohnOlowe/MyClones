@@ -1,0 +1,383 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  font-size: 12pt;
+  margin: 0px;
+}
+
+.header {
+  padding: 5px;
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: right;
+  margin-bottom: 5%;
+}
+
+.header>* {
+  border: 0px solid lightgray;
+  background: white;
+  color: gray;
+  margin: 2px;
+}
+
+.header .sign_in {
+  border: 2px solid orange;
+  color: orange;
+  border-radius: 3px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wolfram_alpha {
+  width: 50%;
+  align-self: center;
+  margin-bottom: 2%;
+}
+
+.enter_input {
+  width: 85%;
+  align-self: center;
+  border: 3px solid orange;
+  border-radius: 3px;
+  padding: 5px;
+  
+  background-image: url("images/svg-image-2.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/*::-webkit-input-placeholder {
+ font-style: italic;
+}
+:-moz-placeholder {
+ font-style: italic; 
+}
+::-moz-placeholder {
+ font-style: italic; 
+}
+:-ms-input-placeholder { 
+ font-style: italic; 
+}*/
+
+.enter_input:placeholder-shown {
+  font-style: italic;
+}
+
+.input_options {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  width: 85%;
+  margin-bottom: 2%;
+}
+
+.input_options button {
+  border: 0px solid lightgray;
+  background: white;
+  letter-spacing: 1px;
+}
+
+.input_options img {
+  vertical-align: middle;
+}
+
+.other_options button {
+  color: gray;
+}
+
+.input_type {
+  background: #F6F6F6;
+}
+
+.input_type button {
+  background: inherit;
+  color: rebeccapurple;
+  vertical-align: middle;
+  /*border: 2px solid orange;
+  border-radius: 3px;*/
+}
+
+.input_type button:focus {
+  border: 2px solid orange;
+  border-radius: 5px;
+  color: #fa6800;
+}
+
+.input_type img {
+  vertical-align: middle;
+}
+
+.ai_advancement {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  margin: auto;
+}
+
+.ai_advancement .capabilities {
+  width: 80%;
+  text-align: right;
+  padding-right: 2%;
+  color: gray;
+  font-style: italic;
+}
+
+.chatgpt_plus {
+  background: #FFF6DE;
+  border: 1px solid orange;
+  width: min-content;
+  padding: 5px;
+}
+
+.available {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 8pt;
+  color: gray;
+  white-space: nowrap;
+}
+
+.chatgpt {
+  color: orangered;
+}
+
+.plus {
+  color: darkgray;
+  font-size: 8pt;
+  font-weight: bold;
+}
+
+.features {
+  display: flex;
+  width: 95%;
+  margin: auto;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 25%;
+}
+
+.offer button {
+  width: 95%;
+  padding: 5%;
+  border: 1px solid lightgray;
+  background: white;
+  margin-bottom: 5%;
+  vertical-align: middle;
+}
+
+.offer img {
+  float: left;
+  vertical-align: middle;
+}
+
+.offer span {
+  float: left;
+  margin-top: 6%;
+}
+
+.offer.mathematics p {
+  color: #9371b5;
+}
+
+.offer.mathematics button:focus {
+  color: #9371b5;
+  border-color: #9371b5;
+}
+
+.offer.tech p {
+  color: #359D6E;
+}
+
+.offer.tech button:focus {
+  color: #359D6E;
+  border-color: #359D6E;
+}
+
+.offer.society p {
+  color: #F96932;
+}
+
+.offer.society button:focus {
+  color: #F96932;
+  border-color: #F96932;
+}
+
+.offer.everyday_life p {
+  color: #00ADB8;
+}
+
+.offer.everyday_life button:focus {
+  color: #00ADB8;
+  border-color: #00ADB8;
+}
+
+.about_footer {
+  background: #F6F6F6;
+  border: 1px solid lightgray;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.about_footer:active {
+  background: #E5E8FF;
+}
+
+.about {
+  text-align: center;
+  color: dimgray;
+}
+
+.aspects_list {
+  display: flex;
+  width: min-content;
+  margin: auto;
+}
+
+.aspects_cont {
+  display: flex;
+}
+
+.aspects_cont img {
+  width: min-content;
+  justify-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.aspects {
+  width: min-content;
+  color: gray;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.bordered_button {
+  border: 0px solid lightgray;
+  background: white;
+  margin: 0px;
+  margin-bottom: 3%;
+  font-size: 8pt;
+  color: gray;
+  border-right: 2px solid gray;
+  font-weight: bold;
+}
+
+.last_button {
+  border: 0px solid lightgray;
+  background: white;
+  margin: 0px;
+  margin-bottom: 3%;
+  font-size: 8pt;
+  color: gray;
+  font-weight: bold;
+}
+
+.wolfram_products,
+.wolfram_connect,
+.terms,
+.wolfram_divisions {
+  display: flex;
+  justify-content: space-around;
+  width: max-content;
+  margin: auto;
+  font-size: 8pt;
+  color: gray;
+  font-weight: bold;
+}
+
+.wolfram_connect img {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 3%;
+}
+
+.wolfram_divisions img {
+  margin: auto;
+  height: 20px;
+}
+
+.terms {
+  font-weight: normal;
+}
+
+.bordered {
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-bottom: 3%;
+  width: max-content;
+  border-right: 2px solid gray;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+.last_item {
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-bottom: 3%;
+  width: max-content;
+  border-right: 0px solid lightgray;
+}
+
+@media (max-width: 800px) {
+  .input_type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: min-content;
+  }
+  
+  .input_type button {
+    white-space: nowrap;
+    width: max-content;
+  }
+  
+  .input_type button img {
+    float: left;
+  }
+  
+  .features {
+    flex-wrap: wrap;
+  }
+  
+  .offer {
+    width: 50%;
+  }
+  
+  .more_topics {
+    display: flex;
+  }
+  
+  .aspects_list {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 3%;
+  }
+  
+  .aspects_cont {
+    width: max-content;
+    margin: auto;
+  }
+  
+  .aspects_cont img {
+    width: 50%;
+  }
+  
+  .aspects_cont p {
+    display: none;
+  }
+  
+  .wolfram_divisions {
+    display: none;
+  }
+}

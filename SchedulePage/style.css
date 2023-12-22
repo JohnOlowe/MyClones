@@ -1,0 +1,146 @@
+body {
+  font-size: 20px;
+  margin: 0px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.header {
+  background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.pro_schedule {
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.header_button {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 4%;
+}
+
+.header_button button {
+  background-color: #7777ff;
+  color: white;
+  padding: 30% 40%;
+  border: 0px solid lightgray;
+  border-radius: 7px;
+}
+
+.header_button span {
+  margin-left: 30%;
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.content {
+  margin: 5% 2% 5% 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.exclaim {
+  text-align: center;
+  font-weight: bold;
+}
+
+.schedule_location {
+  text-align: center;
+}
+
+.sent_successfully {
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #132919;
+  color: white;
+  padding: 5% 2%;
+  height: max-content;
+}
+
+.about_us, .more_info {
+  display: flex;
+}
+
+.pro_schedule-container {
+  width: 49%;
+  margin-right: 3%;
+}
+
+p.head {
+  font-weight: bold;
+  margin-bottom: 10%;
+}
+
+.useful_links {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3%;
+  width: 49%;
+}
+
+.useful_links a {
+  color: white;
+  
+}
+
+.subscribe {
+  width: 49%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input[type="email"], .subscribe button[type="submit"] {
+  background-color: #132919;
+  border: 1px solid white;
+  padding: 1% 3%;
+  border-radius: 3px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.subscribe button[type="submit"] {
+  background-color: royalblue;
+  border: 0px solid royalblue;
+  border-radius: 5px;
+  padding: 2% 0px;
+  color: white;
+}
+
+label {
+  font-weight: bold;
+}
+
+.company_name {
+  text-align: center;
+  background-color: #132919;
+  border: 1px solid white;
+  border-left: 0px solid white;
+  border-right: 0px solid white;
+  margin: 0px;
+  padding: 3% 0px;
+  color: white;
+}
+
+@media (max-width:800px) {
+  .header_button {
+    margin-right: 10%;
+  }
+}

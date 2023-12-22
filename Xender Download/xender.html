@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html dir="ltr" mozdisallowselectionprint moznomarginboxes>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="renderer" content="webkit"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+		<link rel="shortcut icon" href="./favicon.ico" >
+		<link rel="stylesheet" type="text/css" href="./css/common.css" />
+		<script type="text/javascript" src="./models/local-on-off.js"></script>
+		<style type="text/css">
+		html, body{height: 100%;}
+		body{}
+		.oneline{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+		.main{width:100%;height:100%;color:#fff;background:#008900;}
+		.main img.bg-img{height:60%;margin:0 auto;}
+		.main .download-area{text-align:center;}
+		.download-area .title{font-weight:400;font-size:2.6em;line-height:2em;}
+		.download-area .useXender{font-size:1.4em;line-height:2em;font-weight:400;}
+		.download-area .btnText{width:80%;height:2em;line-height:2em;font-size:1.8em;margin:.8em auto;background:#f1f5f8;color:#5b5b5b;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;}
+		.download-area .btnText{box-shadow:0 1px 1px 3px rgba(0, 0, 0, 0.1);-webkit-box-shadow: 0 1px 1px 3px rgba(0, 0, 0, 0.1);}
+		
+		.thumb_alcatel{background:#9c27b0;}
+		.thumb_alcatel .download-area .btnText{background:#009688;color:#fff;}
+		</style>
+	</head>
+	
+	<body>
+	   	<div id="main" class="main">
+			<img id="bg-img" class="bg-img" src="./images/x_bg_hotspot_html.png" />
+			<div id="download-area" class="download-area">
+				<div class="title" id="title"></div>
+				<div class="useXender" id="useXender"></div>
+				<a href="#" class="btnText" id="btnText"></a>
+			</div>
+		</div>
+	   	
+	<script>
+	
+	var allLanguage = {};
+	allLanguage["en-us"] = {
+		"title":"Xender",
+		"useXender":"Faster File Transfer with No Data Usage",
+		"btnText":"DOWNLOAD"
+	}
+	
+	allLanguage["zh-cn"]={
+		"title":"闪传",
+		"useXender":"零流量传输文件",
+		"btnText":"下载"
+	}
+	
+	var allLanguageHaier = {};
+	allLanguageHaier["en-us"] = {
+		"title":"Haier Xender",
+		"useXender":"Faster File Transfer with No Data Usage",
+		"btnText":"DOWNLOAD"
+	}
+	
+	allLanguageHaier["zh-cn"]={
+		"title":"海尔闪传",
+		"useXender":"零流量传输文件",
+		"btnText":"下载"
+	}
+	
+	
+	var module = {};
+	module.language=null;	// 当前语言下，正在使用的文档
+	module.lang = "en-us";
+	module.init = function(){
+		module.lang = Tools.getLangCode();
+	
+		var thumb = domainManager.single.getInstance();
+		thumb.setThumb();
+		
+		module.bind();
+		module.change(module.lang);
+		module.setFontSize();
+		// alert('lang = ' + lang);
+	}
+	module.setFontSize = function(){
+		var m = document.getElementById('main');
+		var i = document.getElementById('bg-img');
+		var d = document.getElementById('download-area');
+
+		var sum = m.clientHeight - (i.clientHeight + d.clientHeight);
+
+		if(sum < -40){
+			m.style.fontSize = '50%'
+		}else if(sum < -30){
+			m.style.fontSize = '60%'
+		}else if(sum < -20){
+			m.style.fontSize = '70%'
+		}else if(sum < -10){
+			m.style.fontSize = '80%'
+		}else if(sum < 0){
+			m.style.fontSize = '90%'
+		}
+	};
+	module.bind = function(){
+		var b = document.getElementById('btnText');
+		var t = new Date().getTime();
+		var l = 'http://' + document.location.host + '/index.html';
+		// alert(l);
+		b.style.display = 'block';
+		
+		b.href = l;
+		
+		setTimeout(function(){
+			if(b.click)
+				b.click();
+		}, 1500);
+	}
+	module.change = function(zh){
+		var url = window.location.href.toLowerCase();
+		var host = window.location.hostname.toLowerCase();
+		
+		var getLang = function(la){
+			
+			if(host.indexOf('haier') > -1){
+				return allLanguageHaier[la];
+			}else if(host.indexOf('ridha') > -1){
+				return allLanguageRidha[la];
+			}else{
+				return allLanguage[la];	
+			}
+		};
+		
+		module.language = getLang(zh);
+		if(module.language == null){
+			module.language = getLang["en-us"];
+		}
+
+		module.setLanguage();
+	}
+	
+	module.setLanguage = function(){
+		for(i in module.language){
+			if(i === '' || i === undefined){
+				continue;
+			}
+			document.getElementById(i).innerHTML = module.language[i];
+		}
+	}
+	
+	module.clickRefuse = function(){
+		module.setLanguage();
+	}
+	
+	var Tools={
+			addEvt: function(o, e, f){
+				if(o.attachEvent){
+					o.attachEvent('on' + e, f);
+				}else if(o.addEventListener){
+					o.addEventListener(e, f);
+				}else{
+					return false;
+				}
+			},
+			getLangCode: function(lang){
+				var code = (typeof navigator === "undefined" ? "zh-cn" : (navigator.language || navigator.userLanguage || "zh-cn").toLowerCase());
+				
+				if(lang){
+					code = lang;
+				}else{
+					code = code.indexOf('zh') == 0 ? 'zh-cn' : 'en-us';
+				}
+				
+				return code;
+			},
+			getUA: function(){
+				return navigator.userAgent.toLowerCase();
+			},
+			isAndroid: function(){
+				var ua = Tools.getUA();
+				return (/android/i.test(ua)) ? true : false;
+			},
+			
+			isBlackBerry: function(){
+				var ua = Tools.getUA();
+				return (/blackberry/i.test(ua)) ? true :false;
+			},
+			
+			isIOS: function(){
+				var ua = Tools.getUA();
+				return (/iphone|ipad|ipod/i.test(ua)) ? true : false;
+			},
+			
+			isIphone: function(){
+				var ua = Tools.getUA();
+				return (/iphone/i.test(ua)) ? true : false;
+			},
+			
+			isIpad: function(){
+				var ua = Tools.getUA();
+				return (/ipad/i.test(ua)) ? true : false;
+			},
+			
+			isWindows: function(){
+				var ua = Tools.getUA();
+				return (/iemobile/i.test(ua)) ? true : false;
+			},
+			
+			isAny: function(){
+				return (Tools.isAndroid() || Tools.isBlackBerry() || Tools.isIOS() || Tools.isWindows());
+			},
+			
+			isAndroidPhone: function(){
+				var loginWidth = Tools.getPageSize().w;
+				var loginHeight = Tools.getPageSize().h;
+				if(Tools.isAndroid() && (loginWidth < loginHeight) && (loginWidth < 640)){
+					return true;
+				}else{
+					return false;
+				}
+			},
+			
+			isPhone: function(){
+				return (Tools.isAndroidPhone() || Tools.isBlackBerry() || Tools.isIphone() || Tools.isWindows());
+			}
+	};
+	Tools.callBack = function(xhr){
+		xhr = Tools.xmlhttp;
+		if (xhr.readyState == 4)
+		{
+			if(xhr.status == 200){
+				
+				var val=xhr.responseText; 
+				var json = JSON.parse(val);
+				
+			
+				if(json["status"] == 404){
+					module.clickRefuse();
+				}else{
+					if(json["responseUrl"]) window.location.href = json["responseUrl"];
+				}
+				
+				
+			}
+		}
+	}
+
+	Tools.getAjax = function(url, type, data , callback){
+		if (window.XMLHttpRequest) {
+			Tools.xmlhttp = new XMLHttpRequest;
+			if (Tools.xmlhttp.overrideMimeType) {
+				Tools.xmlhttp.overrideMimeType('text/xml');
+			};
+		} else if (window.ActiveXObject){
+			Tools.xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		};
+		
+		Tools.xmlhttp.onreadystatechange = callback;
+		Tools.xmlhttp.open(type,url+"?"+data,true);
+		Tools.xmlhttp.send(null);
+
+	}
+	
+	Tools.setPageSize = function(){
+		var pw = document.body.clientWidth;
+		var ph = document.body.clientHieght;
+		
+	}
+	
+	var domainManager = {
+		url: window.location.href.toLowerCase(),
+		hostname: window.location.hostname
+	};
+	
+	domainManager.single = (function(){
+		var uniqueInstance = null;
+		
+		function constructor(){
+			var domainArr = ['alcatel', 'xender', 'shanchuan'];
+			var curDomain = isInter;
+			
+			function setCurDomain(){
+				for(var i = 0; i < domainArr.length; i++){
+					if(domainManager.url.indexOf(domainArr[i]) > -1){
+						curDomain = domainArr[i];
+						return;
+					}
+				}
+			}
+			
+			return {
+				init: function(){
+					setCurDomain();
+				},
+				
+				setThumb: function(){
+					var m = document.getElementById('main');
+					if(curDomain === 'alcatel'){
+						m.className = 'main thumb_alcatel';
+					}else if(isInter === 'onetouch'){
+						m.className = 'main thumb_alcatel';
+					}else{
+						m.className = 'main';
+					}
+				}
+			};
+		}
+		
+		return {
+			getInstance: function(){
+				if(!uniqueInstance){
+					uniqueInstance = new constructor();
+					uniqueInstance.init();
+				}
+				
+				return uniqueInstance;
+			}
+		};
+	})();
+	
+	
+	module.init();
+	//Tools.getAjax("verify" , "GET" , "" , Tools.callBack);
+	
+	
+	
+	</script>
+		
+
+	</body>
+</html>

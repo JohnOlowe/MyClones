@@ -2,7 +2,9 @@ body {
   margin: 0px;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   justify-content: center;
+  justify-content: space-between;
   /*background-image: url("images/ncc.jpg");
   background-repeat: no-repeat;
   background-size: contain;*/
@@ -35,6 +37,7 @@ header input {
   display: flex;
   flex-direction: column;
   align-self: center;
+  width: 95%;
 }
 
 .content img {
@@ -88,6 +91,7 @@ header input {
 
 .comments .text {
   width: 80%;
+  padding: 2%;
   border: 1px solid #f0f0f0;
   border-radius: 3px;
 }
@@ -136,22 +140,28 @@ footer {
 }
 
 .page_button {
-  width: 100%;
+  width: 80%;
   padding: 1%;
   border: 1px solid sandybrown;
   border-radius: 10px;
   background-color: gold;
+  margin-left: 10%;
+}
+
+.back_to_top {
+  margin: auto;
 }
 
 @media (min-width:800px) {
   .content {
-    width: 100%;
+    width: 95%;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: auto;
   }
   
   .programs {
-    width: 45%;
+    width: 47.5%;
     margin-left: 1%;
     margin-right: 1%;
   }

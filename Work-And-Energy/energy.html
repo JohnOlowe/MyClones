@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="energy.css">
+  <link rel="stylesheet" href="w3.css">
+
+  <title>Work and Energy</title>
+</head>
+
+<body>
+  <button id="show" onclick="showLinks()"><span class="navigation_links">☰</span>
+  </button>
+  <div id="menu" class="menu">
+    <nav>
+      <button><a href="#examples">Examples</a></button>
+      <button><a href="#mechanical_energy">Mechanical Energy</a></button>
+
+    </nav>
+    <p style="color: red;">Note: This is not a textbook, but a note written in some lectures.</p>
+
+  </div>
+
+  <h1> Work and Energy</h1> <div class="page_content">
+  <h3>Work</h3>
+  <p>
+    Work is a scalar quantity that has only magnitude but not direction. Work is said to be done when energy is expended.
+  </p>
+  <p>
+    Work is the product of the force and displacement. Work has unit Joule.
+  </p>
+
+  <h3>Energy</h3>
+  <p>
+    Energy is the capability of an object to do work. The types of Energy are:
+  <ul>
+    <li>Kinetic Energy</li>
+    <li>Potential Energy</li>
+    <li>Chemical Energy</li>
+    <li>Sound Energy</li>
+
+  </ul>
+  <br>
+  The unit of Energy is the Joule
+  </p>
+
+  <p>
+    The order of vectors is then given by: <span class="formulas">O = Vector(A) &times; Vector(B) x cos(Angle between them)</span>
+    <br>
+    <code id="center">
+      O = Vector(A) &times; Vector(B) &times; cos(&theta;)
+    </code>
+    <code>Work done = f &times; cos&theta;</code>
+  </p>
+
+  <p>
+    Work done by an external force on a body is the product of the force and the displacement x, provided that the force is in the direction of the displacement.
+    <br>
+    <code>w = f.s</code>
+  </p>
+
+  <p>
+    If the force acts at an angle &theta; to the displacement, the work done is the resolved component of the force along the direction of the displacement multiplied by the displacement.
+  </p>
+  <div class="image-cont1" , id="image-cont1">
+    <img id="diagram1" src="images/diagram1.jpg" alt="Fcos&theta;">
+    <p id="diagram-desc"><em>The graph of the force against the displacement</em></p>
+
+  </div>
+  <p>
+    Hence, the workdone is defined as the scalar product of force F that moves its point of application through a displacement S.
+  </p>
+  </div>
+
+  <div id="examples" class="examples">
+    <p>Examples</p>
+    <ol>
+      <li>
+        <div class="ex1">
+          <p>A body moves through a distance <span class="formulas">S = 5i + 2j - 3k</span> from the origin <span class="formulas">(0, 0, 0)</span> under the influence of a constant force <span class="formulas">F = 4i + 3j - 2k</span>. Determine
+          <p>(a) the work done
+            <br>(b) the angle between <span class="formulas">F</span> and <span class="formulas">S</span>
+          </p>
+          </p>
+          <div class="solution">
+            <p class="title">Solution</p>
+            <p>
+              (a) Workdone = FS
+              <br>Displacement = Final Reaction - Initial Position
+              <br>= 5i + 2j - 3k - [0,0,0]
+              <br>= 5i + 2j - 3k
+            </p>
+            <div class="solution1b">
+              <p>(b)</p>
+              <div class="first_solution">
+                <p>
+                  `abs(F) = sqrt(4^2 + 3^2 + -2^2) = sqrt(29) = 5.4N`
+                </p>
+                <p>
+                  `abs(S) = sqrt(5^2 + 2^2 + -3^2) = sqrt(38) = 6.16m`
+                </p>
+                <p>
+                  `W = abs(F) abs(S) cos theta`
+                </p>
+                <p>
+                  `cos theta = W / (abs(F) abs(S))`
+                </p>
+                <p>
+                  `theta = cos^-1 (W /(abs(F) abs(S)))`
+                </p>
+                <p>
+                  `theta = cos^-1 (32 / (5.4 times 6.16)) = 15.8^O`
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="ex2">
+          <p>
+            A force <span class="formulas">F = (6i - 2j)N</span> acts on a particle that undergoes a displacement <span class="formulas">&Delta;r = (3i + j)m</span>. Find <br>
+            (a) the work done by the force on the particle <br>
+            (b) the angle between <span class="formulas">F</span> and <span class="formulas">&Delta;r</span>
+          </p>
+          <div class="solution">
+            <pre class="title">Solution</pre>
+            <div class="solution2a">
+              <p>(a)</p>
+              <div class="answer">
+                <p> `W.D = F<sub>x</sub>x + F<sub>y</sub>y`</p>
+                <p> `W.D = (6 &times; 3) + (-2 &times; 1)`</p>
+                <p> `W.D = 18 + (-2)`</p>
+                <p> `W.D = 18 - 2`</p>
+                <p> `W.D = 16J`</p>
+              </div>
+            </div>
+            <div class="solution2b">
+              <p>(b)</p>
+              <div class="answer">
+                <p class="math_render">
+                  `&theta; = cos^-1 ((F Delta r)/(abs(F)abs(Delta r)))`</p>
+                <p class="math_render">`&theta; = cos^-1(16 / sqrt((6^2 + 2^2) + (3^2 + 1^2)))`
+                </p>
+                <p class="math_render">
+                  `&theta; = cos^-1 (16 / (40 + 10))`
+                </p>
+                <p class="math_render">
+                  `&theta; = cos^-1 (16 / 50)`
+                </p>
+                <p class="math_render">
+                  `&theta; = cos^-1 0.32`
+                </p>
+                <p class="math_render">
+                  `&theta; = 71.34^o`
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <div id="mechanical_energy" class="page-content">
+    <h2>Mechanical Energy</h2>
+    <p>
+      Mechanical Energy is the energy possessed by a body due to its virtue of position or its velocity.
+    </p>
+    <p>The types of Mechanical Energy are:</p>
+    <ol>
+      <li>
+        <div class="kinetic-container">
+          <h4>Kinetic Energy</h4>
+          <p>
+            The kinetic energy of a body is the energy possessed by the body by virtue of its motion. A solid body, a bullet fired from the rifle, and a swinging pendulum all possess kinetic energy
+          </p>
+          <p>
+            A body is capable of doing work, but in the process of doing this work, its velocity gradually decreases. The amount of work that can be done depends both on the magnitude of the velocity and the mass of the body.
+          </p>
+          <p>
+            A heavy bullet will penetrate a wooden plank deeper than a light bullet of equal size moving with equal velocity.
+          </p>
+          <p>
+            Let us consider a body of mass <span class="formulas">m</span> moving at a velocity <span class="formulas">B</span> in a straight line. Suppose that it is acted upon by a resistant force <span class="formulas">F</span> resisting its motion, which produces a retardation <span class="formulas">A</span>, then force <span class="formulas">F</span> is the product of the mass and the retardation.
+          </p>
+          <code><span>`F = -ma`</span><span>eq 5</span></code>
+          <p>
+            Let dx be the displacement of the body before it comes to rest. But retardation a is expressed as <span class="formulas">`a = (dv)/(dt)`</span>. This can be simplified as <span class="formulas">`(dv)/(dx) times (dx) / (dt)`</span>
+          </p>
+          <code>velocity = `(dx)/(dt)`</code>
+          <code>acceleration = `(dv) / (dx) + (dv) / x`<span>eq 6</span></code>
+          <p>
+            If we substitute equation 6 from equation 5, <code><span class="formulas">`F = -mv times (dv) / (dx)`</span>eq 7</code> hence, the work done in bringing the body to rest is given by: <code><span class="formulas">`W = int F dx = -int mv (dv)/(dx)`</span></code>
+            <code><span class="formulas">`= int -mv dv`</span>eq 8</code>
+            <code>`w = -F((v^2)/(2))`</code>
+            <code><span class="formulas">`lim_(v->0) = w<sub>o</sub> - w<sub>v</sub>`</span><span>` = 1/2 mv^2`</span>eq 9</code>
+            <code>`= 0 - (-v)`</code>
+          </p>
+          <p>
+            This workdone is equal to the kinetic energy of the body.
+            <code><span>`E<sub>k</sub>` <span class="formulas">`= 1/2 mv^2`</span></span><span>eq 10</span></code>
+          </p>
+        </div>
+      </li>
+
+      <li>
+        <div class="potential-container">
+          <h4>Potential Energy</h4>
+          <p>
+            This is the energy stored in a body by virtue of its position, its state of strain.
+            <br>
+            Examples of bodies possessing potential energy are
+          <ul>
+            <li>Water stored in a reservoir</li>
+            <li>A warmed spring</li>
+            <li>A stretched rubber cord</li>
+          </ul>
+          Potential energy is given by the amount of work done by the force acting on the body when the body moves from its given position to another position.
+          </p>
+          <h5>Expression of Potential Energy</h5>
+          <p>
+            Let us consider a body of mass <span class="formulas">m</span> which is at rest at a height <span class="formulas">H</span> above the ground. The work done in raising the body from the ground to height <span class="formulas">H</span> is stored in the body as its potential energy. When the body falls to the ground, the same amount of work can be got back from it. Therefore in order to lift the body vertically up, a force <span class="formulas">mg = W</span> equal to the weight of the body should be applied. When the body istaken vertically up through thr height <span class="formulas">H</span>, then work done <span class="formulas">W = Force &times; Displacement</span> <code>W = mg &times; h</code>
+            This work done is stored as the potential energy of the body which is measured in Joules. i.e <code><span class="formulas">E<sub>p</sub> = mgh</span><span class="formulas"> eq 4</span>
+            </code>
+          </p>
+    </ol>
+  </div>
+  
+  <footer>
+      <div class="footer">
+        <div>
+          <img src="/images/sis.jpg" alt="E-star">
+          <p>Made by Olowe John (Damjay)</p>
+        </div>
+        <div class="footer_links">
+          <a href="/index.html">Home</a><br>
+          <a href="#">Other Clones</a><br>
+          <a href="NCC/ncc.html">My Church</a><br>
+        </div>
+      </div>
+      <a href="#top"><button class="back_to_top">Back To Top</button></a>
+  </footer>
+
+  <script src="ASCIIMathML.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+  h1 {
+    text-align: center;
+    color: #ff1111;
+  }
+  
+  body {
+    background-color: #fff5f5;
+  }
+
+  code {
+    background-color: #ffffcc;
+    display: flex;
+    justify-content: space-around;
+    font-size: inherit;
+    font-style: italic;
+  }
+  
+  .formulas {
+    font-style: italic;
+    font-size: inherit;
+  }
+
+  #diagram1 {
+    width: 100%;
+  }
+
+  .image-cont1 {
+    margin-left: 5%;
+    width: 90%;
+  }
+  
+  .examples {
+    background-color: #f0f0ff;
+  }
+  
+ .solution {
+    background-color: #fff1ff;
+  }
+  
+  .solution1b, .solution2b, .solution2a {
+    display: flex;
+    margin: auto;
+  }
+  
+  .examples .title {
+    background-color: #ffccff;
+  }
+  
+  .answer {
+    width: 90%;
+  }
+  
+ .navigation_links {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .menu nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu nav button {
+    background-color: #ccccff;
+  }
+  
+  .menu {
+    display: none;
+  }
+  
+  footer {
+    font-size: 15px;
+    background-color: #333344;
+    text-align: center;
+    color: white;
+    padding: 2%;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer_links a {
+    color: white;
+  }
+  
+  .footer_links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer div {
+    display: flex;
+    align-items: space-around;
+    flex-direction: column;
+    width: 50%;
+  }
+  
+  .footer img {
+    width: 50%;
+    align-self: center;
+  }
+  
+  .back_to_top {
+    width: 100%;
+    padding: 1%;
+    border: 1px solid sandybrown;
+    border-radius: 10px;
+    background-color: gold;
+  }

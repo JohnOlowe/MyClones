@@ -1,4 +1,8 @@
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   font-size: 6pt;
   padding: 0;
   margin: 0;
@@ -410,6 +414,17 @@ footer {
 
   .main_search_container button {
     width: calc(calc(100% - 60%) / 2);
+  }
+  
+  .chosen_goods {
+    width: 50%;
+    margin: auto;
+    margin-top: 2%;
+  }
+  
+  .add_to_cart, .buy_now {
+    width: 30%;
+    margin: auto;
   }
 
   .back_to_top {
