@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<!-- Font Awesome Icon Library -->
-<link rel="stylesheet" href="font-awesome.min.css">
-<style>
-.checked {
-  color: orange;
-}
-</style>
+  <!-- Font Awesome Icon Library -->
+  <link rel="stylesheet" href="/assets/font-awesome.min.css">
+  <style>
+    .checked {
+      color: orange;
+    }
+
+    .search_field {
+      display: flex;
+      width: 95%;
+      margin: auto;
+      margin-bottom: 0.5em;
+    }
+
+    .search_input {
+      width: 100%;
+      margin: auto;
+      border: 2px double lightgray;
+      border-radius: 2em;
+      padding: 0.7em;
+      padding-left: 2em;
+      font-size: 15pt;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2>Star Rating</h2>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<span class="fa fa-star"></span>
+  <h2>Star Rating</h2>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+
+  <div class="search_field">
+    <i class="fa fa-search"></i>
+    <input type="search" class="search_input" value="http://192.168.49.1:7700/index.html">
+    <i class="fa mic"></i>
+    <i class="fa camera"></i>
+  </div>
 
 </body>
+
 </html>

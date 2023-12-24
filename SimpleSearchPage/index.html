@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>http://192.168.49.1:7700/index.html</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/assets/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <span>☰</span>
+      <img src="images/googlelogo_color_92x36dp.png" alt="Google">
+      <img src="images/user_icon.jpg" alt="" class="user_icon">
+    </div>
+
+    <div class="search_container">
+      <i class="fa fa-search"></i>
+      <input type="search" class="search-input" value="http://192.168.49.1:7700/index.html">
+      <button class="voice_input"><img src="images/google_mic.png" alt=""></button>
+      <button class="scan"><img src="images/google_scan.png" alt=""></button>
+    </div>
+    <div class="nav_links_container">
+    <div class="nav_links">
+      <div class="search_results_nav">
+        <span class="all_results">All</span>
+        <a href="">Images</a>
+        <a href="">Shopping</a>
+        <a href="">Videos</a>
+        <a href="">News</a>
+        <a href="">Books</a>
+        <a href="">Maps</a>
+        <a href="">Flights</a>
+        <a href="">Finance</a>
+      </div>
+      <a href="" class="search_tools">Search tools</a>
+    </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="documents_not_matched">
+      <div class="search_result">
+        <p>Your search <strong>- http://192.168.49.1:7700/index.html -</strong> did not match any documents.</p>
+        <p>Suggestions: </p>
+        <ul>
+          <li>Make sure that all words are spelled correctly.</li>
+          <li>Try different keywords.</li>
+          <li>Try more general keywords.</li>
+        </ul>
+      </div>
+      <img class="not_found" src="images/not_found.svg" alt="Documents not matched.">
+    </div>
+
+    <div class="publish_question">
+      <p class="added_to_web">Get the answer that you're looking for added to the web</p>
+      <div class="input_info">
+        <p>Your question will be shared with online publishers who may be able to answer it. When shared, it won't be associated with your Google Account.</p>
+        <div class="textarea_container">
+          <textarea placeholder="What's your question?" name="" cols="30" rows="3"></textarea>
+          <span class="fa fa-microphone"></span>
+        </div>
+        <em>Make sure that you don't include any private info</em>
+      </div>
+      <div class="learn_more">
+        <a href="">Learn more</a>
+        <button class="submit_question">Submit</button>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="user_location">
+      <p>Nigeria</p>
+      <div class="inline">
+        <strong><span class="filled_circle"></span> 200285, Ibadan</strong>
+        <a href=""> - Based on your past activity</a>
+      </div>
+      <p><a href="">Update location</a></p>
+    </div>
+    <p>More options in <strong><a href="">Menu ☰</a></strong></p>
+  </footer>
+
+<script>
+  var searchInputElement = document.querySelector(".search-input");
+  searchInputElement.addEventListener('keypress', function (e) {
+    if (e.key == "Enter") {
+      var searchInput = searchInputElement.value;
+      console.log("I am searching Google for " + searchInput);
+      window.location.href = "https:///www.google.com/search?q=" + encodeURIComponent(searchInput);
+    }
+  });
+</script>
+</body>
+
+</html>

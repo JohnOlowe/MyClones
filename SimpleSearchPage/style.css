@@ -1,0 +1,202 @@
+body {
+  font-size: 11pt;
+  margin: none;
+}
+
+header {
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 2em;
+  margin-bottom: 0.5em;
+}
+
+.header span {
+  margin: auto 0.7em;
+}
+
+.user_icon {
+  width: 2em;
+  height: 2em;
+  border-radius: 1em;
+}
+
+.search_container {
+  display: flex;
+  border: 2px double lightgray;
+  border-radius: 2em;
+  padding: 0.7em;
+  width: 90%;
+  margin: auto;
+}
+
+.fa-search {
+  margin: auto 0.5em;
+  color: gray;
+}
+
+.search_container button, .search_container img {
+  height: 2em;
+  background-color: white;
+  border: none;
+}
+
+.search-input {
+  flex-grow: 2;
+  border: none;
+  font-size: 12pt;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search_container:focus-within {
+  outline: 1px solid blue;
+}
+
+.nav_links_container {
+  display: flex;
+  width: 100%;
+}
+
+.nav_links {
+  display: flex;
+  width: 41em;
+  margin: 0.3em 0.7em;
+  overflow: scroll;
+}
+
+.search_results_nav {
+  display: inline-flex;
+  border-right: 2px solid gray;
+  width: 33em;
+}
+
+.all_results {
+  font-weight: bold;
+  border-bottom: 0.1em solid black;
+  padding-bottom: 0.2em;
+  margin-right: 0.4em;
+}
+
+.search_results_nav a {
+  padding: 0px 0.4em;
+  text-decoration: none;
+  color: black;
+}
+
+.search_tools {
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0px 1em;
+  color: black;
+}
+
+.documents_not_matched {
+  border-bottom: 0.5em solid #eeeeee;
+  padding: 0em 0.7em;
+}
+
+.not_found {
+  width: 90%;
+}
+
+.added_to_web {
+  font-weight: 430;
+  padding-bottom: 1em;
+  padding-left: 0.7em;
+  border-bottom: 1px solid lightgray;
+}
+
+.input_info {
+  margin: 0em 0.7em 2em 0.7em;
+  display: flex;
+  flex-direction: column;
+}
+
+.input_info p {
+  margin-top: 0px;
+}
+
+/*.input_info textarea {
+  border: 1px solid lightgray;
+  border-radius: 0.2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font: inherit;
+  padding: 0.7em;
+}*/
+
+.textarea_container {
+  display: flex;
+  border: 1px solid lightgray;
+  padding: 0.7em;
+  width: 100%;
+  margin: auto;
+  font-family: inherit;
+}
+
+.textarea_container:focus-within {
+  outline: 1px solid blue;
+}
+
+.textarea_container textarea {
+  flex-grow: 2;
+  border: 0px solid lightgray;
+  font-family: inherit;
+}
+
+.textarea_container textarea:focus {
+  outline: none;
+}
+
+.textarea_container .fa-microphone {
+  color: gray;
+}
+
+.learn_more {
+  margin: 2em 0.7em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.learn_more a {
+  color: black;
+}
+
+.learn_more button {
+  background-color: #fafafa;
+  padding: 1em 2em;
+  border-width: 0px;
+  border-radius: 0.5em;
+  color: lightgray;
+}
+
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 3% 3% 4% 3%;
+  margin: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: blue;
+}
+
+.user_location {
+  margin-bottom: 2em;
+}
+
+.filled_circle {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  background-color: black;
+  border-radius: 100%;
+}
