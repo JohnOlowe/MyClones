@@ -48,7 +48,7 @@ header {
 .search-input {
   flex-grow: 2;
   border: none;
-  font-size: 12pt;
+  font-size: 11pt;
 }
 
 .search-input:focus {
@@ -74,7 +74,7 @@ header {
 .search_results_nav {
   display: inline-flex;
   border-right: 2px solid gray;
-  width: 33em;
+  width: max-content;
 }
 
 .all_results {
@@ -199,4 +199,14 @@ footer a {
   height: 0.7em;
   background-color: black;
   border-radius: 100%;
+}
+
+@media (max-width:800) {
+  body {
+    font-size: 15pt;
+  }
+  
+  .search-input {
+    font-size: 15pt;
+  }
 }

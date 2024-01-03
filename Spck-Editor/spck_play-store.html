@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spck Editor</title>
+
+  <link rel="stylesheet" href="/assets/font-awesome.min.css">
+  <link rel="stylesheet" href="spck-style.css">
+  <script src="spck-script.js"></script>
+</head>
+
+<body>
+  
+  <div class="whole_content">
+    <div class="app_install">
+      <div class="app_name_icon">
+        <img src="images/spck-editor.svg" alt="{SPCK EDITOR}">
+        <div class="app_name">
+          <p class="app_label">Spck Code Editor / Git Client</p>
+          <p class="app_studio">Leaf Stack Studio</p>
+          <p class="in_app_purchases">In-app purchases</p>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="uninstall_button">Uninstall</button>
+        <button class="update_button">Open</button>
+        <button onclick="openApp()" class="install_button">Install</button>
+      </div>
+    </div>
+
+    <div class="aspect new_additions">
+      <div class="header_arrow additions_list">
+        <div class="updated_container">
+          <p class="header whats_new">What's new <span class="blue_filled_circle"></span></p>
+          <p class="desc">Last updated Dec 26, 2023</p>
+        </div>
+        <span class="right_arrow">&#10132;</span>
+      </div>
+      <div class="new_features_list">
+        <ul>
+          <li>Fix issue with Git Checkout</li>
+          <li>Add Snippets to Touch Shortcut Keys</li>
+          <li>Fix issue with multiple cursors...</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="aspect app_rating">
+      <div class="rate">
+        <p class="header rate_app">Rate this app</p>
+        <p class="desc">Tell others what you think</p>
+      </div>
+      <div class="stars">
+        <span onclick="appRated(1)" class="big_star big_star_1"><img src="images/star.svg" alt="Not shown"></span>
+        <span onclick="appRated(2)" class="big_star big_star_2"><img src="images/star.svg" alt="Not shown"></span>
+        <span onclick="appRated(3)" class="big_star big_star_3"><img src="images/star.svg" alt="Not shown"></span>
+        <span onclick="appRated(4)" class="big_star big_star_4"><img src="images/star.svg" alt="Not shown"></span>
+        <span onclick="appRated(5)" class="big_star big_star_5"><img src="images/star.svg" alt="Not shown"></span>
+      </div>
+      <p class="blue_text">Write a review</p>
+    </div>
+
+    <div class="aspect support_app">
+      <div class="header_arrow app_support" onclick="{
+      toggleDisplay('.app_contact_info');
+      toggleDisplay('.down_arrow');
+      toggleDisplay('.up_arrow');
+      toggleDisplay('.up_arrow_light');
+      toggleDisplay('.down_arrow_light');
+      console.log('Toggled Successfully');
+      }">
+        <p class="header">App support</p>
+        <div class="arrows">
+          <div class="arrow_dark light_theme">
+            <span class="down_arrow"><img src="images/down-arrow.svg" alt=""></span>
+            <span class="up_arrow"><img src="images/down-arrow.svg" alt=""></span>
+          </div>
+          <div class="arrow_light dark_theme">
+            <span class="down_arrow_light"><img src="images/down-arrow_light.svg" alt=""></span>
+            <span class="up_arrow_light"><img src="images/down-arrow_light.svg" alt=""></span>
+          </div>
+
+        </div>
+      </div>
+      <div class="enclosed_content app_contact_info">
+        <div class="info_element">
+          <span class="info_icon">
+            <img src="images/earth.svg" alt="" class="light_theme">
+            <img src="images/earth_light.svg" alt="" class="dark_theme">
+          </span>
+          <div class="info_text">
+            <p class="info_header">Website</p>
+            <p class="desc"></p>
+          </div>
+        </div>
+        <div class="info_element">
+          <span class="info_icon">
+            <img src="images/envelope.svg" alt="" class="light_theme">
+            <img src="images/envelope_light.svg" alt="" class="dark_theme">
+            </span>
+          <div class="info_text">
+            <p class="info_header">Email</p>
+            <p class="desc">spckorg@gmail.com</p>
+          </div>
+        </div>
+        <div class="info_element">
+          <span class="info_icon">
+            <img src="images/location.svg" alt="" class="light_theme">
+            <img src="images/location_light.svg" alt="" class="dark_theme">
+          </span>
+          <div class="info_text">
+            <p class="info_header">Address</p>
+            <p class="desc">151 Bently St, Unit 8 Markham, ON</p>
+          </div>
+        </div>
+        <div class="info_element">
+          <span class="info_icon">
+            <img src="images/safeguard.svg" alt="" class="light_theme">
+            <img src="images/safeguard_light.svg" alt="" class="dark_theme">
+            </span>
+          <div class="info_text">
+            <p class="info_header">Privacy Policy</p>
+            <p class="desc"></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="aspect about_app">
+      <div class="header_arrow">
+        <p class="header">About this app</p>
+        <span class="right_arrow_pointed">&#10132;</span>
+      </div>
+      <p class="desc detailed">Make changes, preview, pull/push &amp; commit with this tiny code editor.</p>
+    </div>
+
+    <button class="tools">Tools</button>
+
+    <div class="app_reputation">
+      <div class="reputation_element">
+        <span class="reputation_icon">4.2 <span class="fa fa-star"></span></span>
+        <p class="desc reputation_text"><span>10K reviews</span><span class="info"><span>i</span></span></p>
+      </div>
+      <div class="reputation_element">
+        <span class="reputation_icon download">
+          <img src="images/download.svg" alt="" class="light_theme">
+          <img src="images/download_light.svg" alt="" class="dark_theme">
+        </span>
+        <p class="desc reputation_text">7.7MB</p>
+      </div>
+      <div class="reputation_element">
+        <span class="reputation_icon average_ratings">3+</span>
+        <p class="desc reputation_text"><span>Rated for 3+</span><span class="info"><span>i</span></span></p>
+      </div>
+      <div class="reputation_element last_reputation_element">
+        <span class="reputation_icon">1M+</span>
+        <p class="desc reputation_text">Downloads</p>
+      </div>
+    </div>
+
+    <div class="screenshots_container">
+      <div class="app_screenshots">
+        <img src="images/app-screenshots/spck-9.png" alt="" onclick="displayImage(this)">
+        <img src="images/app-screenshots/spck-8.png" alt="" onclick="displayImage(this)">
+        <img src="images/app-screenshots/spck-7.png" alt="" onclick="displayImage(this)">
+        <img src="images/app-screenshots/spck-6.png" alt="" onclick="displayImage(this)">
+        <img src="images/app-screenshots/spck-5.png" alt="" onclick="displayImage(this)">
+        <img src="images/app-screenshots/spck-4.png" alt="" onclick="displayImage(this)">
+        <img src="images/app-screenshots/spck-3.png" alt="" onclick="displayImage(this)">
+        <img src="images/app-screenshots/spck-2.png" alt="" onclick="displayImage(this)">
+      </div>
+    </div>
+
+    <div class="aspect safe_data">
+      <div class="header_arrow" onclick="{
+      toggleDisplay('.safe_data_content')
+      toggleDisplay('.safe_data .down_arrow');
+      toggleDisplay('.safe_data .up_arrow');
+      toggleDisplay('.safe_data .up_arrow_light');
+      toggleDisplay('.safe_data .down_arrow_light');
+      console.log('Toggled Successfully');
+      }">
+        <p class="header">Data Safety</p>
+        <div class="arrows">
+          <div class="arrow_dark light_theme">
+            <span class="up_arrow"><img src="images/down-arrow.svg" alt=""></span>
+            <span class="down_arrow"><img src="images/down-arrow.svg" alt=""></span>
+          </div>
+          <div class="arrow_light dark_theme">
+            <span class="up_arrow_light"><img src="images/down-arrow_light.svg" alt=""></span>
+            <span class="down_arrow_light"><img src="images/down-arrow_light.svg" alt=""></span>
+          </div>
+        </div>
+      </div>
+      <div class="enclosed_content safe_data_content">
+        <p class="desc detailed">
+          Safety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.
+        </p>
+        <div class="data_handling">
+          <div class="data_type">
+            <span>
+              <img src="images/share.svg" alt="" class="light_theme">
+              <img src="images/share_light.svg" alt="" class="dark_theme">
+            </span>
+            <div>
+              <p class="desc detailed data_types">This app may share these data types with third parties</p>
+              <p class="desc liable_data_types">Personal info, Messages and 2 others</p>
+            </div>
+          </div>
+          <div class="data_type">
+            <span class="data_icon">
+              <img src="images/cloud-upload.svg" alt="" class="light_theme">
+              <img src="images/cloud-upload_light.svg" alt="" class="dark_theme">
+            </span>
+            <div>
+              <p class="desc detailed data_types">This app may collect these data types</p>
+              <p class="desc liable_data_types">Personal info, Messages and 2 others</p>
+            </div>
+          </div>
+          <div class="data_type">
+            <span class="data_icon">
+              <img src="images/lock.svg" alt="" class="light_theme">
+              <img src="images/lock_light.svg" alt="" class="dark_theme">
+            </span>
+            <div>
+              <p class="desc detailed data_types">Data is encrypted in transit</p>
+              <p class="desc liable_data_types"></p>
+            </div>
+          </div>
+          <div class="data_type">
+            <span class="fa fa-trash data_icon"></span>
+            <div>
+              <p class="desc detailed data_types">You can request that data be deleted</p>
+              <p class="desc liable_data_types"></p>
+            </div>
+          </div>
+          <p class="blue_text">See details</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="aspect ratings">
+      <div class="header_arrow ratings_head">
+        <p class="header">Ratings and reviews</p>
+        <span class="right_arrow_pointed">&#10132;</span>
+      </div>
+      <p class="desc ratings_desc">Ratings and reviews are verified and are from people who use the same type of device that you use<span class="info"><span>i</span></span></p>
+      <div class="rating_meter">
+        <div class="star_meter">
+          <p class="rating_measure">4.2</p>
+          <div class="small_stars">
+            <span class="fa fa-star small_star"></span>
+            <span class="fa fa-star small_star"></span>
+            <span class="fa fa-star small_star"></span>
+            <span class="fa fa-star small_star"></span>
+            <span class="fa fa-star-half-empty small_star half_rated"></span>
+          </div>
+          <p class="desc">10,688</p>
+        </div>
+        <div class="gauge_meter">
+          <div class="meter_container">
+            <span class="no">5</span>
+            <div class="meter meter5">
+              <div class="filled"></div>
+            </div>
+          </div>
+          <div class="meter_container">
+            <span class="no">4</span>
+            <div class="meter meter4">
+              <div class="filled"></div>
+            </div>
+          </div>
+          <div class="meter_container">
+            <span class="no">3</span>
+            <div class="meter meter3">
+              <div class="filled"></div>
+            </div>
+          </div>
+          <div class="meter_container">
+            <span class="no">2</span>
+            <div class="meter meter2">
+              <div class="filled"></div>
+            </div>
+          </div>
+          <div class="meter_container">
+            <span class="no">1</span>
+            <div class="meter meter1">
+              <div class="filled"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ratings_container">
+        <div class="rating">
+          <div class="rating_author_container">
+            <div class="rating_author">
+              <div class="author_image_container first"><span class="author_image">V</span></div>
+              <p class="desc detailed">Victory Osiobe</p>
+            </div>
+            <span class="triple_dots">
+              <img src="images/menu-dot.svg" alt="" class="light_theme">
+              <img src="images/menu-dot_light.svg" alt="" class="dark_theme">
+            </span>
+          </div>
+
+          <div class="date">
+            <div class="stars">
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star unchecked"></span>
+            </div>
+            <span class="rating_date">12/17/23</span>
+          </div>
+
+          <p class="desc detailed rating_details">
+            One of the best editors out there, but I've noticed, the headless Browser it utilizes fails to give permission to APIs we may use, so you can't really test out what you've built, except on your default browser, ...
+          </p>
+
+          <p class="desc helpful_no">3 people found this helpful</p>
+
+          <div class="helpful_question_container">
+            <p class="desc helpful_question">Was this review helpful?</p>
+            <div class="helpful_options">
+              <button>Yes</button>
+              <button>No</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="rating">
+          <div class="rating_author_container">
+            <div class="rating_author">
+              <div class="author_image_container second"><span class="author_image">K</span></div>
+              <p class="desc detailed">Kingsley Chibueze</p>
+            </div>
+            <span class="triple_dots">
+              <img src="images/menu-dot.svg" alt="" class="light_theme">
+              <img src="images/menu-dot_light.svg" alt="" class="dark_theme">
+            </span>
+          </div>
+
+          <div class="date">
+            <div class="stars">
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star unchecked"></span>
+              <span class="fa fa-star unchecked"></span>
+            </div>
+            <span class="rating_date">6/29/23</span>
+          </div>
+
+          <p class="desc detailed rating_details">
+            I am giving this app 3 stars 🌟, though it's the ideal kind of text editor i have been looking for, ever since i started using it, it has been a great help since i don't have a PC, but it got to a point that it stopped worki...
+          </p>
+
+          <p class="desc helpful_no">8 people found this helpful</p>
+
+          <div class="helpful_question_container">
+            <p class="desc helpful_question">Was this review helpful?</p>
+            <div class="helpful_options">
+              <button>Yes</button>
+              <button>No</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="rating">
+          <div class="rating_author_container">
+            <div class="rating_author">
+              <div class="author_image_container third"><span class="author_image">E</span></div>
+              <p class="desc detailed">Emmanuel Edet</p>
+            </div>
+            <span class="triple_dots">
+              <img src="images/menu-dot.svg" alt="" class="light_theme">
+              <img src="images/menu-dot_light.svg" alt="" class="dark_theme">
+            </span>
+          </div>
+
+          <div class="date">
+            <div class="stars">
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star unchecked"></span>
+              <span class="fa fa-star unchecked"></span>
+            </div>
+            <span class="rating_date">1/11/21</span>
+          </div>
+
+          <p class="desc detailed rating_details">
+            Well, I've had such a bad experience with this app. All codes I write ends up being deleted from my phone (I don't know how and why). I complained on the GitHub profile and I was asked to take certain step...
+          </p>
+
+          <p class="desc helpful_no">6 people found this helpful</p>
+
+          <div class="helpful_question_container">
+            <p class="desc helpful_question">Was this review helpful?</p>
+            <div class="helpful_options">
+              <button>Yes</button>
+              <button>No</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="blue_text">See all reviews</p>
+    </div />
+
+    <div class="refund">
+      <img class="back_icon light_theme" src="images/back-arrow.svg" alt="">
+      <img class="back_icon_light dark_theme" src="images/back-arrow_light.svg" alt="">
+      <span class="refund_header">Google Play refund policy</span>
+    </div>
+    <p class="desc">All prices include VAT.</p>
+  </div>
+  <div class="back_container">
+    <button style="display: none;" class="back" onclick="back()">&#10132;</button>
+  </div>
+
+  <div class="image_clicked" style="display:none;">
+    <img src="" alt="">
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+body {
+  background-color: black;
+  color: lightgray;
+}
+
+.blue_text, .app_studio, .uninstall_button, .date .stars .fa-star, .small_star {
+  color: #acf;
+}
+
+.actions button {
+  border-color: gray;
+}
+
+.update_button, .install_button, .blue_filled_circle {
+  background-color: #acf;
+  color: darkblue;
+}
+
+.light_theme {
+  display: none;
+}
+
+.dark_theme {
+  display: block;
+}
+
+.header_arrow:active, .meter_container .meter {
+  background-color: #222;
+}
+
+.down_arrow_light, .back_icon_light {
+  display: inline;
+}
+
+.tools, .helpful_options button {
+  color: lightgray;
+  background-color: transparent;
+  border: 1px solid lightgray;
+}
+
+.reputation_icon.download, .info {
+  border-color: lightgray;
+}
+
+.average_ratings {
+  color: black;
+}
+
+.filled {
+  background-color: #acf;
+}
+
+.author_image_container.second {
+  background-color: #55f;
+}
+
+.author_image_container.third {
+  background-color: blue;
+}
+
+.date .stars .fa-star.unchecked {
+  color: #333;
+}
+
+.image_clicked {
+  background-color: black;
+}
+
+button.back {
+  color: lightgray;
+}
