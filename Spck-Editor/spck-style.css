@@ -22,7 +22,7 @@ body {
 }
 
 .app_name {
-  width: 63%;
+  flex-grow: 2;
   margin: auto 2%;
 }
 
@@ -30,7 +30,7 @@ body {
   font-size: 18pt;
   margin-top: 5px;
   margin-bottom: 5px;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 .app_studio {
@@ -507,6 +507,7 @@ button.back {
   transform: rotate(180deg);
   margin-left: 1em;
   margin-top: 1em;
+  color: lightgray;
 }
 
 .image_clicked {

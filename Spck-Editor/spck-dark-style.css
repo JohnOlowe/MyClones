@@ -7,6 +7,10 @@ body {
   color: #acf;
 }
 
+.in_app_purchases, li, .desc, .desc.detailed {
+  color: lightgray;
+}
+
 .actions button {
   border-color: gray;
 }
@@ -64,8 +68,4 @@ body {
 
 .image_clicked {
   background-color: black;
-}
-
-button.back {
-  color: lightgray;
 }

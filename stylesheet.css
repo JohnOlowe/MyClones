@@ -14,14 +14,14 @@ body {
   justify-content: space-between;
   background: darkblue;
   color: white;
-  text-align: start;
   margin: 0px;
   margin-bottom: 5%;
-  padding: 20px;
+  padding: 1em;
 }
 
 .header img {
-  width: 3em;
+  margin: auto 0;
+  width: 1em;
 }
 
 .content {

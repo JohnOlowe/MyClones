@@ -402,6 +402,11 @@ footer {
 @media (max-width:800px) {
   .content {
     flex-direction: column;
+    font-size: 10pt;
+  }
+  
+  button, input {
+    font-size: 10pt;
   }
 
   #search_filters {
