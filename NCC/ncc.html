@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="nccstyles.css">
   <link rel="stylesheet" href="/assets/font-awesome.min.css">
+  <link rel="shortcut icon" type="image/png" href="images/ncc_logo.svg">
+  <meta name="description" content="A basic website for New Covenant Church Olodo Center.">
+  <meta property="og:image" content="images/ncc_logo.svg" />
   <title>NCC Olodo</title>
 </head>
 
@@ -53,10 +56,13 @@
   <div>
   <div class="comments">
     <!--Comments will be improved on later-->
-    <form action="">
+    <div class="comments_container">
+    </div>
+    <form onsubmit="return false">
       <input class="text" type="text" placeholder="Questions or Comments">
-      <input class="submit" type="submit">
+      <input onclick="getText()" class="submit" type="submit">
     </form>
+    <span class="empty_field_error"></span>
   </div>
   
   
