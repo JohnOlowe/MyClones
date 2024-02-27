@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  font-size: 10pt;
+  text-align: center;
+}
+img {
+  height: 100vh;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(4%, -1%);
+}
+/*ff7b6b*/
+body,
+div.background {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: inline-block;
+  position: relative;
+}
+div.background, span.text {
+  display: block;
+  width: 1em;
+  height: 1em;
+  color: white;
+  background-color: #994a40;
+  position: absolute;
+  top: 0;
+  transform: translate(50.5vw, 96.1vh);
+  z-index: 0;
+}

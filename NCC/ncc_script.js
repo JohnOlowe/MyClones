@@ -1,3 +1,5 @@
+document.querySelector(".comments_container").innerHTML = localStorage.getItem("commentTemplate");
+
 function showMore() {
   var button = document.getElementById("show_more");
   var hidden = document.getElementById("more");
@@ -28,6 +30,7 @@ function getText() {
   `;
   document.querySelector("form .text").value = "";
   document.querySelector(".comments_container").innerHTML += commentTemplate;
+  localStorage.setItem("commentTemplate", document.querySelector(".comments_container").innerHTML);
 }
 
 function getTime() {

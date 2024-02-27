@@ -1,0 +1,13 @@
+{
+  "short_name": "Simple Clones",
+  "name": "Simple Clones",
+  "icons": [
+    {
+      "src": "images/simple-clones.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone"
+}
